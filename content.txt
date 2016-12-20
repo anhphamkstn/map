@@ -1,0 +1,1178 @@
+<tbody>
+		<tr>
+			<td bgcolor="#ebebeb" style="width: 20.92%;">
+			<p align="center"><strong>Data Name</strong></p>
+			</td>
+			<td bgcolor="#ebebeb" style="width: 45.2%;">
+			<p align="center"><strong>Description</strong></p>
+			</td>
+			<td bgcolor="#ebebeb">
+			<p align="center"><strong>Python Usage</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 20.92%;">
+			<p><strong>open</strong></p>
+			</td>
+			<td style="width: 45.2%;">
+			<p>Daily open price</p>
+			</td>
+			<td>
+			<p>dr.GetData("open")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 20.92%;">
+			<p><strong>close</strong></p>
+			</td>
+			<td style="width: 45.2%;">
+			<p>Daily close price</p>
+			</td>
+			<td>
+			<p>dr.GetData("close")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 20.92%;">
+			<p><strong>high</strong></p>
+			</td>
+			<td style="width: 45.2%;">
+			<p>Daily high price</p>
+			</td>
+			<td>
+			<p>dr.GetData("high")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 20.92%;">
+			<p><strong>low</strong></p>
+			</td>
+			<td style="width: 45.2%;">
+			<p>Daily low price</p>
+			</td>
+			<td>
+			<p>dr.GetData("low")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 20.92%;">
+			<p><strong>vwap</strong></p>
+			</td>
+			<td style="width: 45.2%;">
+			<p>Daily volume weighted price</p>
+			</td>
+			<td>
+			<p>dr.GetData("vwap")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 20.92%;">
+			<p><strong>volume</strong></p>
+			</td>
+			<td style="width: 45.2%;">
+			<p>Daily volume</p>
+			</td>
+			<td>
+			<p>dr.GetData("volume")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 20.92%;">
+			<p><strong>returns</strong></p>
+			</td>
+			<td style="width: 45.2%;">
+			<p>Daily returns</p>
+			</td>
+			<td>
+			<p>dr.GetData("returns")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 20.92%;">
+			<p><strong>adv20</strong></p>
+			</td>
+			<td style="width: 45.2%;">
+			<p>Average daily volume in past 20 days</p>
+			</td>
+			<td>
+			<p>dr.GetData("adv20")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 20.92%;">
+			<p><strong>sharesout</strong></p>
+			</td>
+			<td style="width: 45.2%;">
+			<p>Daily outstanding shares</p>
+			</td>
+			<td>
+			<p>dr.GetData("sharesout")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 20.92%;">
+			<p><strong>cap</strong></p>
+			</td>
+			<td style="width: 45.2%;">
+			<p>Daily market capitalization</p>
+			</td>
+			<td>
+			<p>dr.GetData("cap")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 20.92%;">
+			<p><strong>split</strong></p>
+			</td>
+			<td style="width: 45.2%;">
+			<p>Stock split ratio</p>
+			</td>
+			<td>
+			<p>dr.GetData("split")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 20.92%;">
+			<p><strong>dividend</strong></p>
+			</td>
+			<td style="width: 45.2%;">
+			<p>Dividend</p>
+			</td>
+			<td>
+			<p>dr.GetData("dividend")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 20.92%;">
+			<p><strong>market</strong></p>
+			</td>
+			<td style="width: 45.2%;">
+			<p>Market grouping</p>
+			</td>
+			<td>
+			<p>dr.GetData("market")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 20.92%;">
+			<p><strong>country</strong></p>
+			</td>
+			<td style="width: 45.2%;">
+			<p>Country grouping</p>
+			</td>
+			<td>
+			<p>dr.GetData("country")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 20.92%;">
+			<p><strong>exchange</strong></p>
+			</td>
+			<td style="width: 45.2%;">
+			<p>Exchange grouping</p>
+			</td>
+			<td>
+			<p>dr.GetData("exchange")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 20.92%;">
+			<p><strong>sector</strong></p>
+			</td>
+			<td style="width: 45.2%;">
+			<p>Sector grouping</p>
+			</td>
+			<td>
+			<p>dr.GetData("sector")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 20.92%;">
+			<p><strong>industry</strong></p>
+			</td>
+			<td style="width: 45.2%;">
+			<p>Industry grouping</p>
+			</td>
+			<td>
+			<p>dr.GetData("industry")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 20.92%;">
+			<p><strong>subindustry</strong></p>
+			</td>
+			<td style="width: 45.2%;">
+			<p>Subindustry grouping</p>
+			</td>
+			<td>
+			<p>dr.GetData("subindustry")</p>
+			</td>
+		</tr>
+	</tbody>
+</table></div>
+
+<p>&nbsp;</p>
+
+<p>Open, high, low, close, volume, vwap and sharesout represents &nbsp;data which have been carefully adjusted for corporate actions (such as dividend, split, reverse split etc.) and ready to be used for Alpha computation. As a comparison, raw price or volume is actually not ready for direct usage in Alpha code; without this distinction, Alpha will be unstable.</p>
+
+<p>This can be explained in an example: Suppose GOOG (Google) will split 2:1 on April 2 and its current price is at $1200. In April 3, it would likely be around $600. Without adjusting, raw price alone will distort&nbsp;the price action.</p>
+
+<p>Adjusted data must be updated every day. For efficiency, WebSim calculates only for a fixed look-back period. This is defined as “Lookback days”.</p>
+
+<p>dividend and split data only have values on the day of the activity and are missing on the other days, this must be kept in mind when combining with other data which have values everyday.</p>
+
+<p>Grouping data have an integer value for every stock corresponding to the group the stock belongs to. For example, if there are 4 possible sector values then sector will have 0, 1, 2 or 3.</p>
+
+<h2>2.&nbsp; Company Fundamental Data for Equity</h2>
+
+<div class="table-responsive"><table style="border-collapse: collapse;" cellpadding="5" width="100%" border="1" cellspacing="0" bordercolor="#ccc">
+	<tbody>
+		<tr>
+			<td bgcolor="#ebebeb" style="width: 21.1%;">
+			<p align="center"><strong>Data Name</strong></p>
+			</td>
+			<td bgcolor="#ebebeb" style="width: 44.7%;">
+			<p align="center"><strong>Description</strong></p>
+			</td>
+			<td bgcolor="#ebebeb">
+			<p align="center"><strong>Python Usage</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>sales</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Sales (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("sales")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>sales_growth</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Growth in Sales (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("sales_growth")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>sales_ps</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Sales Per share (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("sales_ps")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>income</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Net Income (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("income")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>eps</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Earnings Per Share (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("eps")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>cashflow</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Cashflow (Annual)</p>
+			</td>
+			<td>
+			<p>dr.GetData("cashflow")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>cashflow_op</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Cashflow From Operating Activities (Annual)</p>
+			</td>
+			<td>
+			<p>dr.GetData("cashflow_op")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>cashflow_fin</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Cashflow From Financial Activities (Annual)</p>
+			</td>
+			<td>
+			<p>dr.GetData("cashflow_fin")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>cashflow_invst</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Cashflow From Investments (Annual)</p>
+			</td>
+			<td>
+			<p>dr.GetData("cashflow_invst")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>cashflow_dividends</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Cashflow From Dividends (Annual)</p>
+			</td>
+			<td>
+			<p>dr.GetData("cashflow_dividends")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>assets_curr</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Current Assets (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("assets_curr")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>assets</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Total Assets (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("assets")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>equity</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Common Equity (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("equity")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>debt_lt</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Long Term Debt (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("debt_lt")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>debt_st</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Short Term Debt (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("debt_st")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>debt</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Total Debt (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("debt")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>liabilities_curr</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Current Liabilities (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("liabilities_curr")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>liabilities</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Total Liabilities (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("liabilities")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>EBITDA</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Earnings Before Interest, Tax, Depreciation and Amortization (Annual)</p>
+			</td>
+			<td>
+			<p>dr.GetData("EBITDA")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>capex</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Capital Expenditure (Annual)</p>
+			</td>
+			<td>
+			<p>dr.GetData("capex")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>operating_income</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Operating Income (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("operating_income")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>operating_expense</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Operating Expenses (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("operating_expense")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>cogs</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Cost of Goods Sold (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("cogs")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>bookvalue_ps</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Bookvalue Per Share (Annual)</p>
+			</td>
+			<td>
+			<p>dr.GetData("bookvalue_ps")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>return_assets</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Returns on Assets (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("return_assets")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>return_equity</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Returns on Equity (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("return_equity")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>inventory</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Total Inventory (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("inventory")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>inventory_turnover</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Inventory Turnover (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("inventory_turnover")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>depre_amort</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Depreciation and Amortization (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("depre_amort")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>receivable</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Receivables - Total (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("receivable")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>retained_earnings</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Retained Earnings (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("retained_earnings")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>revenue</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Revenue - Total (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("revenue")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>working_capital</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Working Capital (Balance Sheet) (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("working_capital")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>ppent</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Property Plant and Equipment - Total (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("ppent")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>invested_capital</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Invested Capital – Total (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("invested_capital")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>goodwill</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Goodwill (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("goodwill")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>employee</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Employees (Annual)</p>
+			</td>
+			<td>
+			<p>dr.GetData("employee")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>income_beforeextra</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Income before Extraordinary Items (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("income_beforeextra")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>pretax_income</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Pretax Income (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("pretax_income")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>interest_expense</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Interest and Related Expense- Total (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("interest_expense")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>SGA_expense</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Selling, General, and Administrative Expense (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("SGA_expense")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>income_tax</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Income Taxes - Total (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("income_tax")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>EBIT</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Earnings Before Interest and Taxes (Annual)</p>
+			</td>
+			<td>
+			<p>dr.GetData("EBIT")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>current_ratio</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Current ratio (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("current_ratio")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>cash</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Cash - Total (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("cash")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>rd_expense</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Research And Development (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("rad")</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 21.1%;">
+			<p><strong>enterprise_value</strong></p>
+			</td>
+			<td style="width: 44.7%;">
+			<p>Enterprise Value (Quarterly)</p>
+			</td>
+			<td>
+			<p>dr.GetData("enterprise_value")</p>
+			</td>
+		</tr>
+	</tbody>
+</table></div>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<h2>3.&nbsp; Analyst Estimate Data for Equity</h2>
+
+<p>&nbsp;</p>
+
+<p>Note that est_* and etz_* data are sourced from different group of analysts</p>
+
+<div class="table-responsive"><table style="border-collapse: collapse;" cellpadding="5" width="100%" border="1" cellspacing="0" bordercolor="#ccc">
+	<thead>
+		<tr>
+			<td bgcolor="#ebebeb" style="width: 21.1%;">
+			<p align="center"><strong>Data Name</strong></p>
+			</td>
+			<td bgcolor="#ebebeb" style="width: 44.7%;">
+			<p align="center"><strong>Description</strong></p>
+			</td>
+			<td bgcolor="#ebebeb">
+			<p align="center"><strong>Python Usage</strong></p>
+			</td>
+		</tr>
+	</thead>
+	<tbody style="text-align: left;">
+		<tr>
+			<td><strong>est_cashflow_ps</strong></td>
+			<td>Estimate of Cash Flow from Operations per share (Quarterly)</td>
+			<td>dr.GetData("est_cashflow_ps")</td>
+		</tr>
+		<tr>
+			<td><strong>est_sales</strong></td>
+			<td>Estimate of Sales (Quarterly)</td>
+			<td>dr.GetData("est_sales")</td>
+		</tr>
+		<tr>
+			<td><strong>est_dividend_ps</strong></td>
+			<td>Estimate of Dividend per share (Quarterly)</td>
+			<td>dr.GetData("est_dividend_ps")</td>
+		</tr>
+		<tr>
+			<td><strong>est_eps</strong></td>
+			<td>Estimate of Earnings per share (Quarterly)</td>
+			<td>dr.GetData("est_eps")</td>
+		</tr>
+		<tr>
+			<td><strong>est_bookvalue_ps</strong></td>
+			<td>Estimate of Book Value per share (Quarterly)</td>
+			<td>dr.GetData("est_bookvalue_ps")</td>
+		</tr>
+		<tr>
+			<td><strong>est_capex</strong></td>
+			<td>Estimate of Capital Expenditure (Quarterly)</td>
+			<td>dr.GetData("est_capex")</td>
+		</tr>
+		<tr>
+			<td><strong>est_cashflow_fin</strong></td>
+			<td>Estimate of Cash Flow from Financial Activities (Quarterly)</td>
+			<td>dr.GetData("est_cashflow_fin")</td>
+		</tr>
+		<tr>
+			<td><strong>est_cashflow_invst</strong></td>
+			<td>Estimate of Cash Flow from Investments (Quarterly)</td>
+			<td>dr.GetData("est_cashflow_invst")</td>
+		</tr>
+		<tr>
+			<td><strong>est_cashflow_op</strong></td>
+			<td>Estimate of Cash Flow from Operating Activity (Quarterly)</td>
+			<td>dr.GetData("est_cashflow_op")</td>
+		</tr>
+		<tr>
+			<td><strong>est_ebit</strong></td>
+			<td>Estimate of EBIT (Quarterly)</td>
+			<td>dr.GetData("est_ebit")</td>
+		</tr>
+		<tr>
+			<td><strong>est_ebitda</strong></td>
+			<td>Estimate of EBITA (Quarterly)</td>
+			<td>dr.GetData("est_ebitda")</td>
+		</tr>
+		<tr>
+			<td><strong>est_epsa</strong></td>
+			<td>Estimate of Adjusted Earnings per share (Quarterly)</td>
+			<td>dr.GetData("est_epsa")</td>
+		</tr>
+		<tr>
+			<td><strong>est_epsr</strong></td>
+			<td>Estimate of Reported Earnings per share (Quarterly)</td>
+			<td>dr.GetData("est_epsr")</td>
+		</tr>
+		<tr>
+			<td><strong>est_fcf</strong></td>
+			<td>Estimate of Free Cash Flow (Quarterly)</td>
+			<td>dr.GetData("est_fcf")</td>
+		</tr>
+		<tr>
+			<td><strong>est_fcf_ps</strong></td>
+			<td>Estimate of Free Cash Flow per share (Quarterly)</td>
+			<td>dr.GetData("est_fcf_ps")</td>
+		</tr>
+		<tr>
+			<td><strong>est_ffo</strong></td>
+			<td>Estimate of Funds from Operations (Quarterly)</td>
+			<td>dr.GetData("est_ffo")</td>
+		</tr>
+		<tr>
+			<td><strong>est_ffoa</strong></td>
+			<td>Estimate of Adjusted Funds from Operations(Quarterly)</td>
+			<td>dr.GetData("est_ffoa")</td>
+		</tr>
+		<tr>
+			<td><strong>est_grossincome</strong></td>
+			<td>Estimate of Gross Income (Quarterly)</td>
+			<td>dr.GetData("est_grossincome")</td>
+		</tr>
+		<tr>
+			<td><strong>est_netdebt</strong></td>
+			<td>Estimate of Net Debt (Quarterly)</td>
+			<td>dr.GetData("est_netdebt")</td>
+		</tr>
+		<tr>
+			<td><strong>est_netprofit</strong></td>
+			<td>Estimate of Net Profit (Quarterly)</td>
+			<td>dr.GetData("est_netprofit")</td>
+		</tr>
+		<tr>
+			<td><strong>est_netprofit_adj</strong></td>
+			<td>Estimate of Net Profit Adjusted (Quarterly)</td>
+			<td>dr.GetData("est_netprofit_adj")</td>
+		</tr>
+		<tr>
+			<td><strong>est_ptp</strong></td>
+			<td>Estimate of Pre Tax Income (Quarterly)</td>
+			<td>dr.GetData("est_ptp")</td>
+		</tr>
+		<tr>
+			<td><strong>est_ptpr</strong></td>
+			<td>Estimate of Reported Pre Tax Income (Quarterly)</td>
+			<td>dr.GetData("est_ptpr")</td>
+		</tr>
+		<tr>
+			<td><strong>est_rd_expense</strong></td>
+			<td>Estimate of Research and Development Expenses (Quarterly)</td>
+			<td>dr.GetData("est_rd_expense")</td>
+		</tr>
+		<tr>
+			<td><strong>est_sga</strong></td>
+			<td>Estimate of Selling, General and Administrative Expense (Quarterly)</td>
+			<td>dr.GetData("est_sga")</td>
+		</tr>
+		<tr>
+			<td><strong>est_shequity</strong></td>
+			<td>Estimate of Stockholder's Equity (Quarterly)</td>
+			<td>dr.GetData("est_shequity")</td>
+		</tr>
+		<tr>
+			<td><strong>est_tbv_ps</strong></td>
+			<td>Estimate of Tangible Book Value per share (Quarterly)</td>
+			<td>dr.GetData("est_tbv_ps")</td>
+		</tr>
+		<tr>
+			<td><strong>est_tot_assets</strong></td>
+			<td>Estimate of Total Assets (Quarterly)</td>
+			<td>dr.GetData("est_tot_assets")</td>
+		</tr>
+		<tr>
+			<td><strong>est_tot_goodwill</strong></td>
+			<td>Estimate of Total Goodwill (Quarterly)</td>
+			<td>dr.GetData("est_tot_goodwill")</td>
+		</tr>
+		<tr>
+			<td><strong>etz_eps</strong></td>
+			<td>Estimate of Earnings per share (Quarterly)</td>
+			<td>dr.GetData("etz_eps")</td>
+		</tr>
+		<tr>
+			<td><strong>etz_revenue</strong></td>
+			<td>Estimate of Revenue (Quarterly)</td>
+			<td>dr.GetData("etz_revenue")</td>
+		</tr>
+		<tr>
+			<td><strong>etz_eps_delta</strong></td>
+			<td>Absolute change in Estimate of Earnings per share (Quarterly)</td>
+			<td>dr.GetData("etz_eps_delta")</td>
+		</tr>
+		<tr>
+			<td><strong>etz_revenue_delta</strong></td>
+			<td>Absolute change in Estimate of Revenue (Quarterly)</td>
+			<td>dr.GetData("etz_revenue_delta")</td>
+		</tr>
+		<tr>
+			<td><strong>etz_eps_ret</strong></td>
+			<td>Percentage change in Estimate of Earnings per share (Quarterly)</td>
+			<td>dr.GetData("etz_eps_ret")</td>
+		</tr>
+		<tr>
+			<td><strong>etz_revenue_ret</strong></td>
+			<td>Percentage change in Estimate of Revenue (Quarterly)</td>
+			<td>dr.GetData("etz_revenue_ret")</td>
+		</tr>
+		<tr>
+			<td><strong>etz_eps_tsrank</strong></td>
+			<td>Time-Series Rank of Estimate of Earnings per share (Quarterly)</td>
+			<td>dr.GetData("etz_eps_tsrank")</td>
+		</tr>
+	</tbody>
+</table></div>
+
+<h2>&nbsp;</h2>
+
+<h2>4. Relationship Data for Equity</h2>
+
+<p>Relationship data is available for the following categories -</p>
+
+<ul>
+	<li>Customers (<strong>cust</strong>)</li>
+	<li>Competitors (<strong>comp</strong>)</li>
+	<li>Strategic Partners (<strong>part</strong>)</li>
+	<li>All Relationships (<strong>all</strong>)</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<div class="table-responsive"><table border="1" width="100%" style="border-collapse: collapse;" cellpadding="5" cellspacing="0">
+	<thead>
+		<tr>
+			<td bgcolor="#ebebeb" style="width: 21.1%;">
+			<p align="center"><strong>Data Name</strong></p>
+			</td>
+			<td bgcolor="#ebebeb" style="width: 44.7%;">
+			<p align="center"><strong>Description</strong></p>
+			</td>
+			<td bgcolor="#ebebeb">
+			<p align="center"><strong>Python Usage</strong></p>
+			</td>
+		</tr>
+	</thead>
+	<tbody style="text-align: left;">
+		<tr>
+			<td><strong>rel_num_cust</strong></td>
+			<td>Total number of customers</td>
+			<td>dr.GetData("rel_num_cust")</td>
+		</tr>
+		<tr>
+			<td><strong>rel_ret_cust</strong></td>
+			<td>Average 1 day returns of customers</td>
+			<td>dr.GetData("rel_ret_cust")</td>
+		</tr>
+		<tr>
+			<td><strong>rel_num_comp</strong></td>
+			<td>Total number of competitors</td>
+			<td>dr.GetData("rel_num_comp")</td>
+		</tr>
+		<tr>
+			<td><strong>rel_ret_comp</strong></td>
+			<td>Average 1 day returns of competitors</td>
+			<td>dr.GetData("rel_ret_comp")</td>
+		</tr>
+		<tr>
+			<td><strong>rel_num_part</strong></td>
+			<td>Total number of partner</td>
+			<td>dr.GetData("rel_num_part")</td>
+		</tr>
+		<tr>
+			<td><strong>rel_ret_part</strong></td>
+			<td>Average 1 day returns of partners</td>
+			<td>dr.GetData("rel_ret_part")</td>
+		</tr>
+		<tr>
+			<td><strong>rel_num_all</strong></td>
+			<td>Total number of relations</td>
+			<td>dr.GetData("rel_num_all")</td>
+		</tr>
+		<tr>
+			<td><strong>rel_ret_all</strong></td>
+			<td>Average 1 day returns of all relations</td>
+			<td>dr.GetData("rel_ret_all")</td>
+		</tr>
+	</tbody>
+</table></div>
+
+<h2>&nbsp;</h2>
+
+<h2>5. Sentiment Data for Equity</h2>
+
+<div class="table-responsive"><table border="1" width="100%" style="border-collapse: collapse;" cellpadding="5" cellspacing="0">
+	<thead>
+		<tr>
+			<td bgcolor="#ebebeb" style="width: 21.1%;">
+			<p align="center"><strong>Data Name</strong></p>
+			</td>
+			<td bgcolor="#ebebeb" style="width: 44.7%;">
+			<p align="center"><strong>Description</strong></p>
+			</td>
+			<td bgcolor="#ebebeb">
+			<p align="center"><strong>Python Usage</strong></p>
+			</td>
+		</tr>
+	</thead>
+	<tbody style="text-align: left;">
+		<tr>
+			<td><strong>snt_value</strong></td>
+			<td>Indicates mood of sentiment, below zero is negative, above zero is positive</td>
+			<td>dr.GetData("snt_value")</td>
+		</tr>
+		<tr>
+			<td><strong>snt_buzz</strong></td>
+			<td>Indicates intensity of sentiment. Average value is 1. Values below 1 are low intensity while those above 1 are high intensity</td>
+			<td>dr.GetData("snt_buzz")</td>
+		</tr>
+		<tr>
+			<td><strong>snt_buzz_bfl</strong></td>
+			<td>Identical to <strong>snt_buzz</strong>, except average value of 1 is backfilled if entry is missing</td>
+			<td>dr.GetData("snt_buzz_bfl")</td>
+		</tr>
+		<tr>
+			<td><strong>snt_buzz_ret</strong></td>
+			<td>Percentage change in <strong>snt_buzz </strong>from previous day</td>
+			<td>dr.GetData("snt_buzz_ret")</td>
+		</tr>
+		<tr>
+			<td><strong>snt_bearish</strong></td>
+			<td>Bearish sentiment on a scale of <strong>0 - 4</strong></td>
+			<td>dr.GetData("snt_bearish")</td>
+		</tr>
+		<tr>
+			<td><strong>snt_bullish</strong></td>
+			<td>Bullish sentiment on a scale of <strong>0 - 4</strong></td>
+			<td>dr.GetData("snt_bullish")</td>
+		</tr>
+		<tr>
+			<td><strong>snt_ratio</strong></td>
+			<td>Ratio of Bullish and Bearish sentiment. It is calculated from raw values and is different from the ratio of snt_bullish and snt_bearish</td>
+			<td>dr.GetData("snt_ratio")</td>
+		</tr>
+		<tr>
+			<td><strong>snt_ratio_tsrank</strong></td>
+			<td>Time-Series Rank of <strong>snt_ratio</strong></td>
+			<td>dr.GetData("snt_ratio_tsrank")</td>
+		</tr>
+		<tr>
+			<td><strong>snt_bearish_tsrank</strong></td>
+			<td>Time-Series Rank of <strong>snt_bearish</strong></td>
+			<td>dr.GetData("snt_bearish_tsrank")</td>
+		</tr>
+		<tr>
+			<td><strong>snt_bullish_tsrank</strong></td>
+			<td>Time-Series Rank of <strong>snt_bullish</strong></td>
+			<td>dr.GetData("snt_bullish_tsrank")</td>
+		</tr>
+		<tr>
+			<td><strong>snt_social_value</strong></td>
+			<td>Normalized value of sentiment derived from social media.</td>
+			<td>dr.GetData("snt_social_value")</td>
+		</tr>
+		<tr>
+			<td><strong>snt_social_volume</strong></td>
+			<td>Volume of sentiment derived from social media. Higher value indicates more activity.</td>
+			<td>dr.GetData("snt_social_volume")</td>
+		</tr>
+	</tbody>
+</table></div>
+
+<p>&nbsp;</p>
+
+          
+        </div>
+      </div>
+    </article>
+  </main>
+
+    
+    
+
+    
+  <script src="/js/cms/search.js"></script>
+  <script src="/js/cms/responsive-tables.js"></script>
+  <script src="/js/cms/menu.js"></script>
+
+    
+      <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-34958242-1', 'auto');
+  ga('create', 'UA-57944481-3', 'auto', {'name' : 'wsdevTracker'});
+
+  ga('send', 'pageview');
+
+  
+    
+    
+    ga('set' , '&uid', '4575ea68659452d2dea17ec723fec4a74c310dec30477dd0575678b91ac241cb');
+    ga('wsdevTracker.set' , '&uid', '4575ea68659452d2dea17ec723fec4a74c310dec30477dd0575678b91ac241cb');
+  
+  ga('wsdevTracker.send', 'pageview');
+
+</script>
+
+<!-- <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WFC38F"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WFC38F');</script> -->
+
+    
+    <script src="/js/cms/admin-iframe-style.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onCaptchaApiLoad&amp;render=explicit" async=""></script>
+    <script src="/js/build/vendor.js"></script>
+    <script src="/js/build/app.js"></script>
+  
+
+
+<div class="device-xs visible-xs visible-xs-block"></div><div class="device-sm visible-sm visible-sm-block"></div><div class="device-md visible-md visible-md-block"></div><div class="device-lg visible-lg visible-lg-block"></div></body>
