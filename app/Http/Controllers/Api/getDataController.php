@@ -153,7 +153,7 @@ class getDataController extends ApiController
         }
         return $array_marker;
     }
-    
+
     public function convertLatLng($lat,$lng){
         $array = array(
             "lat" => $lat,
@@ -222,10 +222,11 @@ class getDataController extends ApiController
         $arrayDistances=array();
         $source=$request['source'];
         $des=$request['des'];
+        $mode = "distance_".strtolower($request['mode']);
         $a = $source;
         $b = $des;
         foreach ($distances as $distance=>$value){
-            $arrayDistances[$value->source_address][$value->des_address]=$value->distance;
+            $arrayDistances[$value->source_address][$value->des_address]=$value->$mode;
         }
 
         $S = array();//the nearest path with its parent and weight

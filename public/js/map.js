@@ -7,6 +7,21 @@ var key_click_distance = 0;
 var Des;
 var multy_markers;
 var flightPlanCoordinates = [];
+
+var markerOnMap = [];
+var lineOnMap = [];
+var animationOnMap = [];
+
+function setMapOnAll(map) {
+        for (var i = 0; i < markers.length; i++) {
+          marker[i].setMap(map);
+        }
+      }
+      
+function clearMarkers() {
+        setMapOnAll(null);
+      }
+
 var rad = function (x) {
     return x * Math.PI / 180;
 };
@@ -93,6 +108,7 @@ function addMarker(location) {
 
 function DrawAllMarkers(map) {
     var p2 = new Promise(function (resolve, reject) {
+        //clearMarkers();
         loadAllMarkers();
         resolve();
     });
@@ -144,13 +160,14 @@ function Run() {
     Run_Dijkstra2();
 }
 function DrawPolylineTwoMarkers(map) {
+
     var source = Number(document.getElementById('address_Source').value);
     var des = Number(document.getElementById('address_Des').value);
-    var value_marker = findShortPath(source, des);
-    console.log(value_marker);
+    var mode = $('input[name=mode]:checked').val()
+    console.log(mode);
+    var value_marker = findShortPath(source, des , mode);
     var flightPlanCoordinates = getCorOfMarkers(value_marker);
-    console.log(flightPlanCoordinates);
-    //-------------------
+    
     var lineSymbol = {
         path: google.maps.SymbolPath.CIRCLE,
         scale: 8,
@@ -179,10 +196,10 @@ function DrawPolylineTwoMarkers(map) {
     var flightPath = new google.maps.Polyline({
         path: flightPlanCoordinates,
         geodesic: true,
-        strokeColor: '#FF0000',
+        //strokeColor: '#FF0000',
         strokeOpacity: 1.0,
         strokeWeight: 2,
-        travelMode: 'Driving'
+        travelMode: mode
     });
     flightPath.setMap(map);
 

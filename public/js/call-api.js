@@ -1,6 +1,6 @@
 var apiUrl = "http://localhost:8000/api/v1/";
 var markers = [];
-var final_markers=[];
+
 function loadCountOfReport(long, lat) {
      
     var url = apiUrl + "insertmarker";
@@ -21,7 +21,7 @@ function loadCountOfReport(long, lat) {
     );
 }
 function loadAllMarkers() {
-     
+    //markers = [];
     var url = apiUrl + "all_markers";
     var options = {
         url : url,
@@ -30,6 +30,7 @@ function loadAllMarkers() {
     };
     $.ajax(options).done(
         function(response) {
+            //callback(response);
             for (i = 0; i < (response.length-1); i++) {
                 markers.push(['Diem-xe-Bus_'.concat(i), Number(response[i]['lat']), Number(response[i]['lng']), i]);
             }
@@ -221,13 +222,14 @@ function getCorOfMarkers(markers) {
     );
     return value;
 }
-function findShortPath(source,des) {
+function findShortPath(source,des,mode) {
     
     var url = apiUrl + "Dijkstra3";
     var value;
     data = {};
     data.source=source;
     data.des=des;
+    data.mode = mode;
     data=JSON.stringify(data);
     var options = {
         url : url,
@@ -238,6 +240,7 @@ function findShortPath(source,des) {
     };
     $.ajax(options).done(
         function(response) {
+            console.log(response);
             value=response;
         }
     );
