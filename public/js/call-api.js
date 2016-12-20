@@ -73,7 +73,7 @@ function distanceTwoMarkers(source, des,distance) {
     };
     $.ajax(options).done(
         function(response) {
-            //alert(response);
+            alert(response);
         }
     );
 }
@@ -200,7 +200,7 @@ function insertDistance(marker1, marker2) {
         }
     );
 }
-function DrawStreet(markers) {
+function getCorOfMarkers(markers) {
      
     var url = apiUrl + "DrawStress";
     var value;
@@ -221,7 +221,7 @@ function DrawStreet(markers) {
     );
     return value;
 }
-function PathMarker(source,des) {
+function findShortPath(source,des) {
     
     var url = apiUrl + "Dijkstra3";
     var value;

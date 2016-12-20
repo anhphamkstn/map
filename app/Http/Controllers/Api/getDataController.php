@@ -153,6 +153,7 @@ class getDataController extends ApiController
         }
         return $array_marker;
     }
+    
     public function convertLatLng($lat,$lng){
         $array = array(
             "lat" => $lat,

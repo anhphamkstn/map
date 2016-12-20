@@ -35,6 +35,7 @@ function addEventClick(map) {
 
 var info_marker1 = 0;
 var info_marker2 = 0;
+
 function clickDistance(marker) {
     if (1) {
         //alert('OK! you can add street now!');
@@ -88,6 +89,8 @@ function addMarker(location) {
     });
     markers.push(marker);
 }
+
+
 function DrawAllMarkers(map) {
     var p2 = new Promise(function (resolve, reject) {
         loadAllMarkers();
@@ -96,7 +99,6 @@ function DrawAllMarkers(map) {
     p2.then(function () {
         var image = {
             url: 'picture/bus3.png',
-            //url:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
             size: new google.maps.Size(40, 32),
             origin: new google.maps.Point(0, 0),
             anchor: new google.maps.Point(0, 32)
@@ -110,8 +112,8 @@ function DrawAllMarkers(map) {
             var marker = new google.maps.Marker({
                 position: { lat: beach[1], lng: beach[2] },
                 map: map,
-                icon: image,
-                shape: shape,
+                //icon: image,
+                //shape: shape,
                 title: beach[0],
                 zIndex: beach[3]
             });
@@ -144,9 +146,9 @@ function Run() {
 function DrawPolylineTwoMarkers(map) {
     var source = Number(document.getElementById('address_Source').value);
     var des = Number(document.getElementById('address_Des').value);
-    var value_marker = PathMarker(source, des);
+    var value_marker = findShortPath(source, des);
     console.log(value_marker);
-    var flightPlanCoordinates = DrawStreet(value_marker);
+    var flightPlanCoordinates = getCorOfMarkers(value_marker);
     console.log(flightPlanCoordinates);
     //-------------------
     var lineSymbol = {
@@ -154,6 +156,14 @@ function DrawPolylineTwoMarkers(map) {
         scale: 8,
         strokeColor: '#393'
     };
+
+    var image = {
+            url: 'picture/bus3.png',
+            size: new google.maps.Size(40, 32),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(0, 32)
+        };
+        
     var line = new google.maps.Polyline({
         path: flightPlanCoordinates,
         icons: [{
@@ -175,6 +185,7 @@ function DrawPolylineTwoMarkers(map) {
         travelMode: 'Driving'
     });
     flightPath.setMap(map);
+
 }
 function animateCircle(line) {
     var count = 0;
@@ -186,6 +197,7 @@ function animateCircle(line) {
         line.set('icons', icons);
     }, 20);
 }
+
 function GetSourceAndDes() {
     google.maps.event.addListener(map, 'click', function (e) {
         source = e.latLng.lng();

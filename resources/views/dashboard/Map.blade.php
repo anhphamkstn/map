@@ -20,7 +20,7 @@
         <!--<button onclick="addMultiMarkers(map);" type=button value="Add Markers" class="btn btn-primary">Add Markers</button>-->
         <button onclick="DrawAllMarkers(map);" type=button value="View All" class="btn btn-success">View All</button>
         <!--<button onclick="clickDistance(marker);" type=button value="add 1 Distance" class="btn btn-info">add 1 Distance</button>-->
-        <button onclick="distanceTwoMarkes();" type=button value="DISTANCE" class="btn btn-warning">DISTANCE</button>
+        <!--<button onclick="distanceTwoMarkes();" type=button value="DISTANCE" class="btn btn-warning">DISTANCE</button>-->
         <button onclick="DrawPolylineTwoMarkers(map);" type=button value="Draw street" class="btn btn-danger">Draw street</button>
     </div>
     <div id="map"></div>
