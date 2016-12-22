@@ -1,5 +1,5 @@
 var apiUrl = "http://localhost:8000/api/v1/";
-var markers = [];
+
 
 function loadCountOfReport(long, lat) {
      
@@ -20,8 +20,8 @@ function loadCountOfReport(long, lat) {
         }
     );
 }
-function loadAllMarkers() {
-    //markers = [];
+function loadAllMarkers(callback) {
+    markers  = [];
     var url = apiUrl + "all_markers";
     var options = {
         url : url,
@@ -30,10 +30,7 @@ function loadAllMarkers() {
     };
     $.ajax(options).done(
         function(response) {
-            //callback(response);
-            for (i = 0; i < (response.length-1); i++) {
-                markers.push(['Diem-xe-Bus_'.concat(i), Number(response[i]['lat']), Number(response[i]['lng']), i]);
-            }
+            callback(response);        
         }
     );
 }
@@ -202,7 +199,7 @@ function insertDistance(marker1, marker2) {
     );
 }
 function getCorOfMarkers(markers) {
-     
+     console.log(markers)
     var url = apiUrl + "DrawStress";
     var value;
     data = {};
@@ -217,7 +214,8 @@ function getCorOfMarkers(markers) {
     };
     $.ajax(options).done(
         function(response) {
-          value=response;
+            console.log(response)
+            value=response;
         }
     );
     return value;
@@ -240,7 +238,6 @@ function findShortPath(source,des,mode) {
     };
     $.ajax(options).done(
         function(response) {
-            console.log(response);
             value=response;
         }
     );

@@ -106,11 +106,23 @@ class getDataController extends ApiController
     {
         $source=$request['source'];
         $des=$request['des'];
-        $graph=$request['graph'];
-        //$graph=$this->graph();
-        //return $graph;
-        $g = new Dijkstra2($graph);
-        return $g->shortestPath($source,$des);// 3:4->5->3
+        $mode = "distance_".strtolower($request['mode']);
+
+        $distances = DB::table('Distances')->get();
+        $vertexs = DB::table('Markers')->select('id')->get();
+        return $vertexs;
+        $graph=array();
+       
+        $mode = "distance_".strtolower($request['mode']);
+        
+        foreach ($distances as $distance=>$value){
+            $graph[$value->source_address][$value->des_address]=$value->$mode;
+        }
+        
+        $g = new Dijkstra2($graph,$vertexs);
+        $return = $g->shortestPath($source,$des);
+
+        return $return;
 
     }
     public function PolylineMarkers2()
@@ -142,12 +154,10 @@ class getDataController extends ApiController
     public function DrawStress(Request $request)
     {
         $markers=$request['markers'];
-       // $markers=explode(",",$markers);
-
         $array_marker=array();
         foreach ($markers as $marker){
-            $lat=DB::table('Markers')->where('id',$marker+1)->pluck('lat')[0];
-            $lng=DB::table('Markers')->where('id',$marker+1)->pluck('lng')[0];
+            $lat=DB::table('Markers')->where('id',$marker)->pluck('lat')[0];
+            $lng=DB::table('Markers')->where('id',$marker)->pluck('lng')[0];
             $taget=$this->convertLatLng((float)$lat,(float)$lng);
             array_push($array_marker,$taget);
         }
@@ -172,15 +182,15 @@ class getDataController extends ApiController
         $a = sin($dLat/2)*sin($dLat/2)+cos(deg2rad($marker1[1]))*cos(deg2rad($marker2[1]))*sin($dLong/2)*sin($dLong/2);
         $c = 2 * atan2(sqrt($a),sqrt(1 - $a));
         $d = $R * $c;
-//        $latitudeFrom = $marker1[1];
-//        $longitudeFrom =$marker1[2];
-//        $latitudeTo = $marker1[1];
-//        $longitudeTo = $marker1[2];
-//        $theta = $longitudeFrom - $longitudeTo;
-//        $dist = sin(deg2rad($latitudeFrom)) * sin(deg2rad($latitudeTo)) +  cos(deg2rad($latitudeFrom)) * cos(deg2rad($latitudeTo)) * cos(deg2rad($theta));
-//        $dist = acos($dist);
-//        $dist = rad2deg($dist);
-//        $miles = $dist * 60 * 1.1515;
+        //        $latitudeFrom = $marker1[1];
+        //        $longitudeFrom =$marker1[2];
+        //        $latitudeTo = $marker1[1];
+        //        $longitudeTo = $marker1[2];
+        //        $theta = $longitudeFrom - $longitudeTo;
+        //        $dist = sin(deg2rad($latitudeFrom)) * sin(deg2rad($latitudeTo)) +  cos(deg2rad($latitudeFrom)) * cos(deg2rad($latitudeTo)) * cos(deg2rad($theta));
+        //        $dist = acos($dist);
+        //        $dist = rad2deg($dist);
+        //        $miles = $dist * 60 * 1.1515;
         DB::table('Distances')->insert(
             ['source_address' => $sour, 'des_address' => $des,'distance'=>$d]
         );
@@ -189,6 +199,7 @@ class getDataController extends ApiController
 
     public function graph(){
         $team_amounts = [];
+
         $sources = DB::table('Distances')->select('source_address')->distinct()->orderBy('source_address', 'asc')->get();
         $distances = DB::table('Distances')->get();
 
@@ -211,48 +222,77 @@ class getDataController extends ApiController
             $distance = $distances[$i];
 
             if ($sourceAddress == $distance->source_address) {
-                $group[$distance->des_address] = (double) $distance->distance;
+                $group[$distance->des_address] = (double) $distance->distance_driving;
             }
         }
 
         return $group;
     }
     public  function Dijkstra3(Request $request){
+
         $distances = DB::table('Distances')->get();
+        
         $arrayDistances=array();
         $source=$request['source'];
-        $des=$request['des'];
+        $target=$request['des'];
         $mode = "distance_".strtolower($request['mode']);
-        $a = $source;
-        $b = $des;
+        
         foreach ($distances as $distance=>$value){
             $arrayDistances[$value->source_address][$value->des_address]=$value->$mode;
         }
-
+        
         $S = array();//the nearest path with its parent and weight
         $Q = array();//the left nodes without the nearest path
-        foreach(array_keys($arrayDistances) as $val) $Q[$val] = 99999;
-        $Q[$a] = 0;
+        foreach(array_keys($arrayDistances) as $val) 
+            $Q[$val] = 99999;
+        $Q[$source] = 0;
+
         while(!empty($Q)){
             $min = array_search(min($Q), $Q);//the most min weight
-            if($min == $b) break;
-            foreach($arrayDistances[$min] as $key=>$val) if(!empty($Q[$key]) && $Q[$min] + $val < $Q[$key]) {
-                $Q[$key] = $Q[$min] + $val;
-                $S[$key] = array($min, $Q[$key]);
-            }
+            if($min == $target) break;
+            foreach($arrayDistances[$min] as $key=>$val) 
+                if(!empty($Q[$key]) && $Q[$min] + $val < $Q[$key]) {
+                    $Q[$key] = $Q[$min] + $val;
+                    $S[$key] = array($min, $Q[$key]);
+                }
             unset($Q[$min]);
         }
         $path = array();
-        $pos = $b;
-        while($pos != $a){
+        $pos = $target;
+        while(isset($S[$pos]) && $S[$pos]) {
             $path[] = $pos;
             $pos = $S[$pos][0];
         }
-        $path[] = $a;
+        $path[] = $source;
         $path = array_reverse($path);
 //        echo "<br />From $a to $b";
 //        echo "<br />The length is ".$S[$b][1];
 //        echo "<br />Path is ".implode('->', $path);
         return $path;
     }
+
+    public function DFS(Request $request){
+
+        $distances = DB::table('Distances')->get();
+        
+        $arrayDistances=array();
+        $source=$request['source'];
+        $target=$request['des'];
+        $mode = "distance_".strtolower($request['mode']);
+        
+        foreach ($distances as $distance=>$value){
+            $arrayDistances[$value->source_address][$value->des_address]=$value->$mode;
+        }
+        
+        
+    }
+
+    public $Chuaxet = array();//the nearest path with its parent and weight
+    public $Ke = array();
+
+    public function run_dfs($v)
+    {
+        
+    }
+
 }

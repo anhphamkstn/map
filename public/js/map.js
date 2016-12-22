@@ -8,13 +8,14 @@ var Des;
 var multy_markers;
 var flightPlanCoordinates = [];
 
-var markerOnMap = [];
+var markers = [];
+
 var lineOnMap = [];
 var animationOnMap = [];
 
 function setMapOnAll(map) {
         for (var i = 0; i < markers.length; i++) {
-          marker[i].setMap(map);
+          markers[i].setMap(map);
         }
       }
       
@@ -30,7 +31,8 @@ function initMap() {
     var directionsDisplay = new google.maps.DirectionsRenderer;
     map = new google.maps.Map(document.getElementById('map'), {
         zoom: 13,
-        center: { lat: 20.9970736, lng: 105.8375195 }
+        center: { lat: 41.085396, lng: -73.530767 }
+        
     });
 }
 
@@ -91,54 +93,47 @@ function actionKey($key) {
     if ($key == 0) return 1;
     else return 0;
 }
-function drawmarker(map) {
-    map.addListener('click', function (event) {
-        addMarker(event.latLng);
-    });
 
-}
-function addMarker(location) {
-    var marker = new google.maps.Marker({
-        position: location,
-        map: map
-    });
-    markers.push(marker);
-}
+// function drawmarker(map) {
+//     map.addListener('click', function (event) {
+//         addMarker(event.latLng);
+//     });
 
+// }
+// function addMarker(location) {
+//     var marker = new google.maps.Marker({
+//         position: location,
+//         map: map
+//     });
+//     markers.push(marker);
+// }
 
-function DrawAllMarkers(map) {
-    var p2 = new Promise(function (resolve, reject) {
-        //clearMarkers();
-        loadAllMarkers();
-        resolve();
-    });
-    p2.then(function () {
-        var image = {
-            url: 'picture/bus3.png',
-            size: new google.maps.Size(40, 32),
-            origin: new google.maps.Point(0, 0),
-            anchor: new google.maps.Point(0, 32)
-        };
-        var shape = {
-            coords: [1, 1, 1, 20, 18, 20, 18, 1],
-            type: 'poly'
-        };
-        for (var i = 0; i < markers.length; i++) {
-            var beach = markers[i];
+function addMarker(data) {
+    clearMarkers();
+    markers = [];
+    var v = [];
+     for (i = 0; i < (data.length-1); i++) {
+            v.push(['Location_'+Number(data[i]['id']), Number(data[i]['lat']), Number(data[i]['lng']), i]);
+        }
+    
+    for (var i = 0; i < v.length; i++) {
+            var beach = v[i];
+            console.log(beach[0]);
             var marker = new google.maps.Marker({
                 position: { lat: beach[1], lng: beach[2] },
-                map: map,
-                //icon: image,
-                //shape: shape,
                 title: beach[0],
                 zIndex: beach[3]
             });
-            clickDistance(marker);
+            markers.push(marker);
+            //clickDistance(marker);
         }
-    });
-
-
+    setMapOnAll(map);
 }
+
+function DrawAllMarkers(map) {  
+        loadAllMarkers(addMarker);     
+}
+
 function addMultiMarkers(map) {
     addEventClick(map)
 }
@@ -159,13 +154,24 @@ function Run() {
     RunUpdatedistance();
     Run_Dijkstra2();
 }
-function DrawPolylineTwoMarkers(map) {
 
-    var source = Number(document.getElementById('address_Source').value);
-    var des = Number(document.getElementById('address_Des').value);
+function DrawPolyline(map) {
+
+    for(i=1; i<counter; i++){ 
+        j=i-1
+        source = $('#address_' + j).val();
+        des = $('#address_' + i).val();
+        DrawPolylineTwoMarkers(map,source,des)
+    }
+}
+
+function DrawPolylineTwoMarkers(map,source,des) {
+
+    source = Number(source);
+    des = Number(des);
     var mode = $('input[name=mode]:checked').val()
-    console.log(mode);
     var value_marker = findShortPath(source, des , mode);
+
     var flightPlanCoordinates = getCorOfMarkers(value_marker);
     
     var lineSymbol = {
@@ -191,12 +197,11 @@ function DrawPolylineTwoMarkers(map) {
     });
 
     animateCircle(line);
-    //--------
-
+ 
     var flightPath = new google.maps.Polyline({
         path: flightPlanCoordinates,
         geodesic: true,
-        //strokeColor: '#FF0000',
+        strokeColor: getColorByMode(mode),
         strokeOpacity: 1.0,
         strokeWeight: 2,
         travelMode: mode
@@ -311,3 +316,61 @@ function addDistance(marker) {
     key_click_distance += 1;
     console.log(key_click_distance);
 }
+
+
+function getColorByMode(mode) {
+    switch(mode) {
+    case "DRIVING":
+        return "#F44336";
+    case "WALKING":
+        return "#009688";    
+    default:
+        return "#2196F3"
+    }
+}
+
+var counter = 2;
+$(document).ready(function(){
+
+    counter = 2;
+
+    $("#addButton").click(function () {
+
+	if(counter>8){
+            alert("Only 10 textboxes allow");
+            return false;
+	}
+
+	var newTextBoxDiv = $(document.createElement('div'))
+	     .attr("id", 'TextBoxDiv' + counter).attr("class", 'form-group has-feedback');
+
+	newTextBoxDiv.after().html('<input id="address_'+counter+'" type="email" class="form-control" placeholder="Des address">\
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>');
+
+	newTextBoxDiv.appendTo("#TextBoxesGroup");
+
+
+	counter++;
+     });
+
+     $("#removeButton").click(function () {
+        if(counter==2){
+            alert("No more textbox to remove");
+            return false;
+        }
+
+        counter--;
+
+        $("#TextBoxDiv" + counter).remove();
+
+     });
+
+     $("#getButtonValue").click(function () {
+
+        var msg = '';
+        for(i=1; i<counter; i++){
+        msg += "\n Textbox #" + i + " : " + $('#textbox' + i).val();
+        }
+            alert(msg);
+        });
+  });

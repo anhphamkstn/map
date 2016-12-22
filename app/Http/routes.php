@@ -39,6 +39,8 @@ Route::group(['prefix' => 'api/v1'], function () {
     Route::post('addDistance', 'Api\getDataController@insertDistance');
     Route::get('graph', 'Api\getDataController@graph');
     Route::post('Dijkstra3', 'Api\getDataController@Dijkstra3');
-
+    Route::post('Dijkstra2', 'Api\getDataController@Dijkstra2');
+    Route::post('dijkstra4', 'Api\getDataController@Dijkstra4');
+    Route::post('DFS', 'Api\getDataController@DFS');
 
     });

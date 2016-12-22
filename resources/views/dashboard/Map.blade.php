@@ -14,20 +14,22 @@
             <label class="radio-inline"><input type="radio" name="mode"  value="WALKING">Walking</label>
             <!--<label class="radio-inline"><input type="radio" name="option">Shortest Time</label>-->
         </div>
-        <div class="form-group has-feedback">
-            <input  id="address_Source" type="email" class="form-control" placeholder="Source address">
-            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        <div id="TextBoxesGroup">
+            <div class="form-group has-feedback">
+                <input  id="address_0" type="email" class="form-control" placeholder="Source address">
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+                <input id="address_1" type="email" class="form-control" placeholder="Des address">
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            </div>
         </div>
-        <div class="form-group has-feedback">
-            <input id="address_Des" type="email" class="form-control" placeholder="Des address">
-            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-        </div>
-        
-        <!--<button onclick="addMultiMarkers(map);" type=button value="Add Markers" class="btn btn-primary">Add Markers</button>-->
-        <button onclick="DrawAllMarkers(map);" type=button value="View All" class="btn btn-success">View All</button>
-        <!--<button onclick="clickDistance(marker);" type=button value="add 1 Distance" class="btn btn-info">add 1 Distance</button>-->
+            
+        <button id="addButton" type=button class="btn btn-primary">Add destination</button>
+        <button id="removeButton" type=button  class="btn btn-info">Remove destination</button>
+        <!--<button onclick="DrawAllMarkers(map);" type=button value="View All" class="btn btn-success">View All</button>   -->
         <!--<button onclick="distanceTwoMarkes();" type=button value="DISTANCE" class="btn btn-warning">DISTANCE</button>-->
-        <button onclick="DrawPolylineTwoMarkers(map);" type=button value="Draw street" class="btn btn-danger">Draw street</button>
+        <button onclick="DrawPolyline(map);" type=button value="Draw street" class="btn btn-danger">Find direction</button>
         <div class="form-group">
             <p id="result"></p>
         </div>
